@@ -36,7 +36,7 @@ function isValid(key, apiKeys) {
     apiKeys[key].checked = Date.now();
   }
 
-  if (apiKeys[key].uses >= maxRequests) throw Error("User daily qouta reached");
+  if (apiKeys[key].uses >= maxRequests) throw Error("Rate limit exceeded");
 
   apiKeys[key].uses++;
 }
