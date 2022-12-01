@@ -21,9 +21,7 @@ function generateKey(user, apiKeys) {
   //terrible idea, but I didn't want to make a database for this.
   //ideally we'd use a local database to store the keys so the read is fast
 
-  apiKeys[user] = {
-    key: key,
-    user: user,
+  apiKeys[key] = {
     checked: Date.now(),
     uses: 0,
   };
